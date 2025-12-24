@@ -59,6 +59,19 @@ python download_dataset.py
 
 The dataset will be downloaded and extracted to the `data/` directory.
 
+### 5. Explore the Dataset (Optional)
+
+After downloading, you can explore the dataset contents:
+
+```bash
+python explore_dataset.py
+```
+
+This will show:
+- Dataset location and structure
+- Number of classes and images
+- Statistics about the dataset
+
 ## Alternative: Manual Download
 
 If you prefer to download the dataset manually:
@@ -72,9 +85,13 @@ If you prefer to download the dataset manually:
 ```
 KPDL/
 ├── data/                      # Dataset directory (gitignored)
-│   └── [dataset files]        # Bean leaf images and labels
+│   ├── README.md              # Data directory information
+│   └── [dataset files]        # Bean leaf images and labels (after download)
 ├── download_dataset.py        # Automated dataset download script
+├── explore_dataset.py         # Dataset exploration utility
+├── verify_setup.py            # Setup verification script
 ├── requirements.txt           # Python dependencies
+├── QUICKSTART.md              # Quick start guide for new users
 ├── .gitignore                # Git ignore rules
 └── README.md                 # This file
 ```
