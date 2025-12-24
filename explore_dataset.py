@@ -60,15 +60,16 @@ def explore_dataset(data_dir='./data'):
         
         for class_dir in sorted(directories):
             # Count images in this class directory
-            image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp'}
-            image_files = []
-            # Use iterdir for immediate children, then check subdirectories if needed
-            for item in class_dir.rglob('*'):
-                if item.is_file() and item.suffix.lower() in image_extensions:
-                    image_files.append(item)
+            image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp']
+            image_count = 0
+            # Use targeted glob patterns for better performance
+            for ext in image_extensions:
+                # Search for both lowercase and uppercase extensions
+                image_count += sum(1 for _ in class_dir.rglob(f'*{ext}'))
+                image_count += sum(1 for _ in class_dir.rglob(f'*{ext.upper()}'))
             
-            class_stats[class_dir.name] = len(image_files)
-            print(f"  • {class_dir.name}: {len(image_files)} images")
+            class_stats[class_dir.name] = image_count
+            print(f"  • {class_dir.name}: {image_count} images")
         
         print()
         print("📈 Statistics:")

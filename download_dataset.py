@@ -83,9 +83,16 @@ def download_dataset():
                 size_mb = size / (1024 * 1024)
                 print(f"  - {item.name} ({size_mb:.2f} MB)")
             elif item.is_dir():
-                # Count files in subdirectory
-                file_count = sum(1 for _ in item.rglob('*') if _.is_file())
-                print(f"  - {item.name}/ ({file_count} files)")
+                # Quick count of immediate children only for performance
+                try:
+                    file_count = sum(1 for _ in item.iterdir() if _.is_file())
+                    subdir_count = sum(1 for _ in item.iterdir() if _.is_dir())
+                    if subdir_count > 0:
+                        print(f"  - {item.name}/ ({file_count} files, {subdir_count} subdirectories)")
+                    else:
+                        print(f"  - {item.name}/ ({file_count} files)")
+                except PermissionError:
+                    print(f"  - {item.name}/ (permission denied)")
         
         return True
         
