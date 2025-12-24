@@ -1,1 +1,28 @@
-kaggle>=1.8.3
+# =============================================
+# BEAN LEAF LESIONS CLASSIFICATION
+# Các thư viện cần thiết cho project
+# =============================================
+
+# Kaggle API - để tải dataset
+kaggle>=1.5.12
+
+# Core Data Science
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Visualization - Trực quan hóa dữ liệu
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Deep Learning Framework
+tensorflow>=2.10.0
+
+# Image Processing - Xử lý ảnh
+Pillow>=8.0.0
+
+# Machine Learning Utilities - Đánh giá mô hình
+scikit-learn>=0.24.0
+
+# Jupyter Notebook
+notebook>=6.4.0
+ipykernel>=6.0.0
