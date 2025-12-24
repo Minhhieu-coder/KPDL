@@ -74,13 +74,18 @@ def download_dataset():
         print("\n✓ Dataset downloaded successfully!")
         print(f"Dataset location: {os.path.abspath(download_path)}")
         
-        # List downloaded files
+        # List downloaded files (limit to top-level to avoid performance issues)
         print("\nDownloaded files:")
-        for item in Path(download_path).rglob('*'):
+        data_path = Path(download_path)
+        for item in sorted(data_path.iterdir()):
             if item.is_file():
                 size = item.stat().st_size
                 size_mb = size / (1024 * 1024)
-                print(f"  - {item.relative_to(download_path)} ({size_mb:.2f} MB)")
+                print(f"  - {item.name} ({size_mb:.2f} MB)")
+            elif item.is_dir():
+                # Count files in subdirectory
+                file_count = sum(1 for _ in item.rglob('*') if _.is_file())
+                print(f"  - {item.name}/ ({file_count} files)")
         
         return True
         

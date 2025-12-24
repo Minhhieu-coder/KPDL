@@ -5,6 +5,7 @@ Setup verification script for the Bean Leaf Lesions Classification project.
 This script checks if all requirements are properly configured.
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -52,7 +53,6 @@ def check_kaggle_credentials():
     print(f"  ✓ Credentials found at {kaggle_json}")
     
     # Check permissions (Unix-like systems only)
-    import os
     if os.name != 'nt':
         stat_info = kaggle_json.stat()
         if stat_info.st_mode & 0o077:

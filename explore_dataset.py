@@ -61,10 +61,11 @@ def explore_dataset(data_dir='./data'):
         for class_dir in sorted(directories):
             # Count images in this class directory
             image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp'}
-            image_files = [
-                f for f in class_dir.rglob('*')
-                if f.is_file() and f.suffix.lower() in image_extensions
-            ]
+            image_files = []
+            # Use iterdir for immediate children, then check subdirectories if needed
+            for item in class_dir.rglob('*'):
+                if item.is_file() and item.suffix.lower() in image_extensions:
+                    image_files.append(item)
             
             class_stats[class_dir.name] = len(image_files)
             print(f"  • {class_dir.name}: {len(image_files)} images")
@@ -75,9 +76,8 @@ def explore_dataset(data_dir='./data'):
             total_images = sum(class_stats.values())
             print(f"  • Total images: {total_images}")
             print(f"  • Number of classes: {len(class_stats)}")
-            if class_stats:
-                avg_images = total_images / len(class_stats)
-                print(f"  • Average images per class: {avg_images:.1f}")
+            avg_images = total_images / len(class_stats)
+            print(f"  • Average images per class: {avg_images:.1f}")
     
     # List non-directory files in the root data folder
     if files:
