@@ -2,6 +2,10 @@
 
 This repository contains the Bean Leaf Lesions Classification dataset from Kaggle for machine learning research and development.
 
+## 🚀 Quick Start
+
+**New users:** See [QUICKSTART.md](QUICKSTART.md) for a step-by-step guide.
+
 ## Dataset Information
 
 **Source:** [Bean Leaf Lesions Classification Dataset](https://www.kaggle.com/datasets/marquis03/bean-leaf-lesions-classification)
@@ -31,7 +35,21 @@ To download the dataset, you need to set up Kaggle API credentials:
    chmod 600 ~/.kaggle/kaggle.json
    ```
 
-### 3. Download the Dataset
+### 3. Verify Your Setup (Optional)
+
+Check if everything is configured correctly:
+
+```bash
+python verify_setup.py
+```
+
+This script will verify:
+- Python version compatibility
+- Required packages installation
+- Kaggle API credentials
+- Data directory setup
+
+### 4. Download the Dataset
 
 Run the download script:
 
