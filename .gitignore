@@ -1,5 +1,6 @@
 # Dataset files
-data/
+data/*
+!data/README.md
 *.zip
 *.csv
 
