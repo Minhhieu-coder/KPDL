@@ -9,10 +9,6 @@ Dự án sử dụng dataset từ Kaggle để phân loại 3 trạng thái củ
 - 🟡 **Angular Leaf Spot** (Vết bệnh góc)
 - 🔴 **Bean Rust** (Bệnh rỉ sắt)
 
-## 🚀 Quick Start
-
-**Người dùng mới:** Xem [QUICKSTART.md](QUICKSTART.md) để bắt đầu nhanh.
-
 ## 📓 Notebook Chính
 
 **[bean_leaf_classification.ipynb](bean_leaf_classification.ipynb)** - Notebook Jupyter hoàn chỉnh bao gồm:
@@ -52,21 +48,7 @@ pip install -r requirements.txt
    chmod 600 ~/.kaggle/kaggle.json
    ```
 
-### 3. Kiểm tra cài đặt (Tùy chọn)
-
-Kiểm tra xem mọi thứ đã được cấu hình đúng chưa:
-
-```bash
-python verify_setup.py
-```
-
-Script này sẽ kiểm tra:
-- Phiên bản Python
-- Các thư viện đã cài đặt
-- Kaggle API credentials
-- Thư mục data
-
-### 4. Tải Dataset
+### 3. Tải Dataset
 
 Chạy script tải dataset:
 
@@ -76,20 +58,7 @@ python download_dataset.py
 
 Dataset sẽ được tải và giải nén vào thư mục `data/`.
 
-### 5. Khám phá Dataset (Tùy chọn)
-
-Sau khi tải xong, bạn có thể khám phá nội dung dataset:
-
-```bash
-python explore_dataset.py
-```
-
-Hiển thị:
-- Vị trí và cấu trúc dataset
-- Số lượng lớp và ảnh
-- Thống kê về dataset
-
-### 6. Chạy Notebook Phân Loại Bệnh Lá Đậu
+### 4. Chạy Notebook Phân Loại Bệnh Lá Đậu
 
 Mở và chạy notebook chính:
 
@@ -117,7 +86,6 @@ Nếu bạn muốn tải dataset thủ công:
 ```
 KPDL/
 ├── data/                           # Thư mục dataset (gitignored)
-│   ├── README.md                   # Thông tin thư mục data
 │   ├── train/                      # Ảnh huấn luyện (sau khi tải)
 │   │   ├── angular_leaf_spot/
 │   │   ├── bean_rust/
@@ -128,10 +96,7 @@ KPDL/
 │       └── healthy/
 ├── bean_leaf_classification.ipynb  # 📓 Notebook chính (EDA, Training, Evaluation)
 ├── download_dataset.py             # Script tải dataset tự động
-├── explore_dataset.py              # Công cụ khám phá dataset
-├── verify_setup.py                 # Script kiểm tra cài đặt
 ├── requirements.txt                # Các thư viện Python cần thiết
-├── QUICKSTART.md                   # Hướng dẫn bắt đầu nhanh
 ├── .gitignore                      # Git ignore rules
 └── README.md                       # File này
 ```
@@ -163,7 +128,37 @@ Các mô hình trong notebook có thể đạt:
 
 Vui lòng tham khảo [trang dataset Kaggle](https://www.kaggle.com/datasets/marquis03/bean-leaf-lesions-classification) để biết thông tin về license và điều khoản sử dụng.
 
-## 👨‍💻 Tác giả
+## 👥 Thông Tin Nhóm & Phân Công Nhiệm Vụ
+
+### Danh sách thành viên nhóm
+
+| STT | Họ và Tên | MSSV | Vai trò |
+|-----|-----------|------|---------|
+| 1 | [Thành viên 1] | [MSSV] | Nhóm trưởng |
+| 2 | [Thành viên 2] | [MSSV] | Thành viên |
+| 3 | [Thành viên 3] | [MSSV] | Thành viên |
+
+### Phân công nhiệm vụ cụ thể
+
+| Thành viên | Nhiệm vụ | Mô hình phụ trách | Tiến độ |
+|------------|----------|-------------------|---------|
+| [Thành viên 1] | - Thu thập và tiền xử lý dữ liệu<br>- Khám phá dữ liệu (EDA)<br>- Huấn luyện mô hình ResNet50<br>- Viết báo cáo tổng hợp | ResNet50 | ✅ Hoàn thành |
+| [Thành viên 2] | - Data Augmentation<br>- Huấn luyện mô hình MobileNetV2<br>- Đánh giá và so sánh kết quả<br>- Viết tài liệu hướng dẫn | MobileNetV2 | ✅ Hoàn thành |
+| [Thành viên 3] | - Thiết kế kiến trúc mô hình<br>- Huấn luyện mô hình VGG19<br>- Tối ưu hóa hyperparameters<br>- Chuẩn bị slide thuyết trình | VGG19 | ✅ Hoàn thành |
+
+### Mức độ tham gia
+
+| Thành viên | Mức độ đóng góp | Ghi chú |
+|------------|-----------------|---------|
+| [Thành viên 1] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
+| [Thành viên 2] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
+| [Thành viên 3] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
+
+> **Lưu ý:** Mỗi thành viên đã áp dụng ít nhất 1 mô hình học máy theo yêu cầu của đồ án.
+
+---
+
+## 👨‍💻 Thông tin dự án
 
 Dự án này được thực hiện như bài tập lớn môn **Khai Phá Dữ Liệu**.
 
