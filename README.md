@@ -134,25 +134,25 @@ Vui lòng tham khảo [trang dataset Kaggle](https://www.kaggle.com/datasets/mar
 
 | STT | Họ và Tên | MSSV | Vai trò |
 |-----|-----------|------|---------|
-| 1 | [Thành viên 1] | [MSSV] | Nhóm trưởng |
-| 2 | [Thành viên 2] | [MSSV] | Thành viên |
+| 1 | [TRẦN MINH HIẾU] | [2351267262] | Nhóm trưởng |
+| 2 | [BẢO] | [MSSV] | Thành viên |
 | 3 | [Thành viên 3] | [MSSV] | Thành viên |
 
 ### Phân công nhiệm vụ cụ thể
 
 | Thành viên | Nhiệm vụ | Mô hình phụ trách | Tiến độ |
 |------------|----------|-------------------|---------|
-| [Thành viên 1] | - Thu thập và tiền xử lý dữ liệu<br>- Khám phá dữ liệu (EDA)<br>- Huấn luyện mô hình ResNet50<br>- Viết báo cáo tổng hợp | ResNet50 | ✅ Hoàn thành |
-| [Thành viên 2] | - Data Augmentation<br>- Huấn luyện mô hình MobileNetV2<br>- Đánh giá và so sánh kết quả<br>- Viết tài liệu hướng dẫn | MobileNetV2 | ✅ Hoàn thành |
-| [Thành viên 3] | - Thiết kế kiến trúc mô hình<br>- Huấn luyện mô hình VGG19<br>- Tối ưu hóa hyperparameters<br>- Chuẩn bị slide thuyết trình | VGG19 | ✅ Hoàn thành |
+| [HIẾU] | - Thu thập và tiền xử lý dữ liệu<br>- Khám phá dữ liệu (EDA)<br>- Huấn luyện mô hình ResNet50<br>- Viết báo cáo tổng hợp | ResNet50 | ✅ Hoàn thành |
+| [HIẾU] | - Data Augmentation<br>- Huấn luyện mô hình MobileNetV2<br>- Đánh giá và so sánh kết quả<br>- Viết tài liệu hướng dẫn | MobileNetV2 | ✅ Hoàn thành |
+| [HIẾU, BẢO] | - Thiết kế kiến trúc mô hình<br>- Huấn luyện mô hình VGG19<br>- Tối ưu hóa hyperparameters<br>- Chuẩn bị slide thuyết trình | VGG19 | ✅ Hoàn thành |
 
 ### Mức độ tham gia
 
 | Thành viên | Mức độ đóng góp | Ghi chú |
 |------------|-----------------|---------|
-| [Thành viên 1] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
-| [Thành viên 2] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
-| [Thành viên 3] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
+| [HIẾU] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
+| [HIẾU] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
+| [BẢO] | 33.3% | Hoàn thành đầy đủ nhiệm vụ được giao |
 
 > **Lưu ý:** Mỗi thành viên đã áp dụng ít nhất 1 mô hình học máy theo yêu cầu của đồ án.
 
